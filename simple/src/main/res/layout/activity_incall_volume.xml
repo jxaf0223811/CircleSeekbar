@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#99000000"
+    tools:context="test.io.feeeei.circleseekbar.SetProcessActivity">
+
+    <com.android.incallui.CircleSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        app:wheel_reached_width="5dp"
+        app:wheel_scroll_only_one_circle="true"
+        app:wheel_pointer_radius="6dp"
+        app:wheel_reached_color="#FFBD00FF"
+        app:wheel_unreached_color="#99BD00FF"
+        app:wheel_unreached_width="5dp"
+        app:wheel_cur_process="1"
+        app:wheel_max_process="7"/>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_incall_volume"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="12sp"
+        android:text="@string/incall_volume"
+        android:textColor="#FFFFFFFF"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="70dp"/>
+
+</FrameLayout>

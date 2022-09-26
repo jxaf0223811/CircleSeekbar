@@ -2,7 +2,7 @@ package test.io.feeeei.circleseekbar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import io.feeeei.circleseekbar.CircleSeekBar;
+import com.android.incallui.CircleSeekBar;
 
 public class InflateActivity extends AppCompatActivity {
 

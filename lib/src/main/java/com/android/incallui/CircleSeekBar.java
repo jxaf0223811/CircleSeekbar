@@ -1,4 +1,4 @@
-package io.feeeei.circleseekbar;
+package com.android.incallui;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -267,10 +267,10 @@ public class CircleSeekBar extends View {
                     mCurAngle = 360 / mMaxProcess;
                     cos = -1;
                 } else {
-                    if(angle < 360 / mMaxProcess) {
+                    if (angle < 360 / mMaxProcess) {
                         angle = 360 / mMaxProcess;
-                    }else if(angle % (360 / mMaxProcess) != 0) {
-                        angle =  Math.round(mMaxProcess * ((float) angle / 360)) * (360 / mMaxProcess);
+                    } else if (angle % (360 / mMaxProcess) != 0) {
+                        angle = Math.round(mMaxProcess * ((float) angle / 360)) * (360 / mMaxProcess);
                     }
                     mCurAngle = angle;
                 }

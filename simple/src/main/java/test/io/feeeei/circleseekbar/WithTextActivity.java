@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import io.feeeei.circleseekbar.CircleSeekBar;
+import com.android.incallui.CircleSeekBar;
 
 
 public class WithTextActivity extends AppCompatActivity {
