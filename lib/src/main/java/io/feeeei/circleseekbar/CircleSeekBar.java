@@ -264,16 +264,22 @@ public class CircleSeekBar extends View {
                     mCurAngle = 360;
                     cos = -1;
                 } else if (mCurAngle < 90 && angle > 270) {
-                    mCurAngle = 0;
+                    mCurAngle = 360 / mMaxProcess;
                     cos = -1;
                 } else {
+                    if(angle < 360 / mMaxProcess) {
+                        angle = 360 / mMaxProcess;
+                    }else if(angle % (360 / mMaxProcess) != 0) {
+                        angle =  Math.round(mMaxProcess * ((float) angle / 360)) * (360 / mMaxProcess);
+                    }
                     mCurAngle = angle;
                 }
             } else {
                 mCurAngle = angle;
             }
             mCurProcess = getSelectedValue();
-            refershWheelCurPosition(cos);
+            refershPosition();
+//            refershWheelCurPosition(cos);
             if (mChangListener != null && (event.getAction() & (MotionEvent.ACTION_MOVE | MotionEvent.ACTION_UP)) > 0) {
                 mChangListener.onChanged(this, mCurProcess);
             }
